@@ -1,0 +1,6 @@
+---
+
+- name: Install nodejs
+  openbsd_pkg:
+    name: "{{ nodejs_package }}"
+    state: present

@@ -1,2 +1,2 @@
-__nodejs_db_dir: /var/db/nodejs
-__nodejs_conf_dir: /usr/local/etc/nodejs
+__nodejs_package: www/node
+__nodejs_npm_package: www/npm
