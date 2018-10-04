@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: nodejs
   author: Tomoyuki Sakurai
   description: Install nodejs and npm
   company: N/A
