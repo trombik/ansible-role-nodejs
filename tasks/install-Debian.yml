@@ -1,11 +1,11 @@
 ---
 
 - name: Install nodejs
-  pkgng:
+  apt:
     name: "{{ nodejs_package }}"
     state: present
 
 - name: Install npm
-  pkgng:
+  apt:
     name: "{{ nodejs_npm_package }}"
     state: present

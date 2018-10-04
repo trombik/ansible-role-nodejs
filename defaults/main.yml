@@ -1,8 +1,2 @@
-nodejs_user: nodejs
-nodejs_group: nodejs
-nodejs_log_dir: /var/log/nodejs
-nodejs_db_dir: "{{ __nodejs_db_dir }}"
-nodejs_service: nodejs
-nodejs_conf_dir: "{{ __nodejs_conf_dir }}"
-nodejs_conf_file: "{{ __nodejs_conf_dir }}/nodejs.conf"
-nodejs_flags: ""
+nodejs_package: "{{ __nodejs_package }}"
+nodejs_npm_package: "{{ __nodejs_npm_package }}"
