@@ -1,3 +1,3 @@
-## Release 0.0.0
+## Release 1.0.0
 
-* Initial release
+* 6848b34 feature: initial implementation
