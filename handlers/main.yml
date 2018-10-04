@@ -1,0 +1,6 @@
+---
+
+- name: Restart nodejs
+  service:
+    name: nodejs
+    state: restarted

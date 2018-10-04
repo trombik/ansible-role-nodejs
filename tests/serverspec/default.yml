@@ -1,0 +1,5 @@
+- hosts: localhost
+  roles:
+    - ansible-role-nodejs
+  vars:
+    nodejs_config: ""
