@@ -11,7 +11,7 @@ when "redhat"
   nodejs_command = "node"
   package_npm = "npm"
 when "ubuntu"
-  package_npm = "npm"
+  package_npm = "nodejs"
 when "freebsd"
   package = "www/node"
   package_npm = "www/npm"
@@ -33,7 +33,12 @@ end
 
 describe command "#{nodejs_command} --version" do
   its(:stderr) { should be_empty }
-  its(:stdout) { should match(/^v\d+\.\d+\.\d+$/) }
+  case os[:family]
+  when "ubuntu"
+    its(:stdout) { should match(/^v8\.\d+\.\d+$/) }
+  else
+    its(:stdout) { should match(/^v\d+\.\d+\.\d+$/) }
+  end
   its(:exit_status) { should eq 0 }
 end
 
