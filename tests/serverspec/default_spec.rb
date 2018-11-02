@@ -26,6 +26,7 @@ end
   package_npm
 ].each do |p|
   next if p.nil?
+
   describe package(p) do
     it { should be_installed }
   end
