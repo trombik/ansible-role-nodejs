@@ -5,6 +5,12 @@
     name: "{{ nodejs_package }}"
     state: present
 
+- name: Update libnghttp2
+  # XXX https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=241643
+  pkgng:
+    name: libnghttp2
+    state: latest
+
 - name: Install npm
   pkgng:
     name: "{{ nodejs_npm_package }}"
