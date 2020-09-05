@@ -1,2 +1,3 @@
+---
 nodejs_package: "{{ __nodejs_package }}"
 nodejs_npm_package: "{{ __nodejs_npm_package }}"
