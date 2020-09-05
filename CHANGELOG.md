@@ -1,3 +1,9 @@
+## Release 1.0.3
+
+* 922da41 bugfix: QA
+* 97c8c04 bugfix: QA
+* 07976f6 bugfix: update libnghttp2 to the latest
+
 ## Release 1.0.2
 
 * 95b7692 bugfix: QA
