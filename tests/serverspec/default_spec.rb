@@ -14,6 +14,7 @@ when "redhat"
   package_npm = "npm"
 when "ubuntu"
   package_npm = "nodejs"
+  nodejs_command = os[:release].to_f < 20.04 ? "nodejs" : "node"
 when "freebsd"
   package = "www/node"
   package_npm = "www/npm"
@@ -38,7 +39,7 @@ describe command "#{nodejs_command} --version" do
   its(:stderr) { should be_empty }
   case os[:family]
   when "ubuntu"
-    its(:stdout) { should match(/^v8\.\d+\.\d+$/) }
+    its(:stdout) { should match(/^v10\.\d+\.\d+$/) }
   else
     its(:stdout) { should match(/^v\d+\.\d+\.\d+$/) }
   end
