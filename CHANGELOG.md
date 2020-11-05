@@ -1,3 +1,10 @@
+## Release 1.0.4
+
+* 57f12f3 bugfix: QA
+* 1277b26 bugfix: re-bundle with bundler 2.x
+* 673a963 bugfix: un-ignore Gemfile.lock
+* 6b2e95b imp: support Ubuntu 20.04 and update CentOS to 7.8
+
 ## Release 1.0.3
 
 * 922da41 bugfix: QA
