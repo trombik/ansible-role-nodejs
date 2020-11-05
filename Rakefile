@@ -3,7 +3,7 @@
 require "pathname"
 
 root_dir = Pathname.new(__FILE__).dirname
-integration_test_dir = root_dir + "tests" + "integration"
+integration_test_dir = root_dir / "tests" / "integration"
 integration_test_dirs = Pathname.new(integration_test_dir)
                                 .children.select(&:directory?)
 task default: %w[test]
@@ -28,7 +28,7 @@ namespace :integration do
   desc "run all tests"
   task :test do
     integration_test_dirs.each do |d|
-      rakefile = d + "Rakefile"
+      rakefile = d / "Rakefile"
       if rakefile.exist? && rakefile.file?
         Dir.chdir(d) do
           puts format("entering to %<directory>s", directory: d)
@@ -48,7 +48,7 @@ namespace :integration do
   desc "clean after test"
   task :clean do
     integration_test_dirs.each do |d|
-      rakefile = d + "Rakefile"
+      rakefile = d / "Rakefile"
       next unless rakefile.exist? && rakefile.file?
 
       Dir.chdir(d) do
